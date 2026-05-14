@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 1577687a16d24f44d98017bc2d76b9e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3624355412595806838
+    second: marcadortiempo_0
+  - first:
+      213: 3799789189660492135
+    second: marcadortiempo_1
+  - first:
+      213: -2781584071667511214
+    second: marcadortiempo_2
+  - first:
+      213: -8676714678446317566
+    second: marcadortiempo_3
+  - first:
+      213: -8037861890002264765
+    second: marcadortiempo_4
+  - first:
+      213: -1233507193321414687
+    second: marcadortiempo_5
+  - first:
+      213: -5884030213009940966
+    second: marcadortiempo_6
+  - first:
+      213: -3938425322640951418
+    second: marcadortiempo_7
+  - first:
+      213: 7251180071662431724
+    second: marcadortiempo_8
+  - first:
+      213: -1928877905563494145
+    second: marcadortiempo_9
+  - first:
+      213: -6657185838721606775
+    second: marcadortiempo_10
+  - first:
+      213: -8188081425005518860
+    second: marcadortiempo_11
+  - first:
+      213: 1488363712980180798
+    second: marcadortiempo_12
+  - first:
+      213: 8158668398221262165
+    second: marcadortiempo_13
+  - first:
+      213: -7436612845037001329
+    second: marcadortiempo_14
+  - first:
+      213: 5243808117824563887
+    second: marcadortiempo_15
+  - first:
+      213: -8600859489817745667
+    second: marcadortiempo_16
+  - first:
+      213: 9006013684971872359
+    second: marcadortiempo_17
+  - first:
+      213: 488691572184304526
+    second: marcadortiempo_18
+  - first:
+      213: -7904748023477794209
+    second: marcadortiempo_19
+  - first:
+      213: 7676938992293018222
+    second: marcadortiempo_20
+  - first:
+      213: 7080858538801891935
+    second: marcadortiempo_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: marcadortiempo_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 1513
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d667474f3b3bdc0800000000000000
+      internalID: -3624355412595806838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_1
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 751
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7614517c2209bb430800000000000000
+      internalID: 3799789189660492135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_2
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 739
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2509f573604d569d0800000000000000
+      internalID: -2781584071667511214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_3
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 734
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2002acd98fd169780800000000000000
+      internalID: -8676714678446317566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_4
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 724
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34dd3cc8237c37090800000000000000
+      internalID: -8037861890002264765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_5
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 719
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef103a3eb3b1eee0800000000000000
+      internalID: -1233507193321414687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_6
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 703
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e50e932b9b75ea0800000000000000
+      internalID: -5884030213009940966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_7
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 695
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68735952907e759c0800000000000000
+      internalID: -3938425322640951418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_8
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 679
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceda4d55bdd51a460800000000000000
+      internalID: 7251180071662431724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_9
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 671
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8d9c7b3cf3b35e0800000000000000
+      internalID: -1928877905563494145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_10
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 662
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98bdc3f30ccec93a0800000000000000
+      internalID: -6657185838721606775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_11
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 655
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff529683571e5e80800000000000000
+      internalID: -8188081425005518860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_12
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 647
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3fd3c849eab7a410800000000000000
+      internalID: 1488363712980180798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_13
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 620
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55dfe248ea9693170800000000000000
+      internalID: 8158668398221262165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_14
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 599
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85667fa408dbc890800000000000000
+      internalID: -7436612845037001329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_15
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 567
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa2e3543bfb5c840800000000000000
+      internalID: 5243808117824563887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_16
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 534
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6ad520ddb93a880800000000000000
+      internalID: -8600859489817745667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_17
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 447
+        width: 7
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7602e070bb9cbfc70800000000000000
+      internalID: 9006013684971872359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_18
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 428
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8bc5cc456e28c600800000000000000
+      internalID: 488691572184304526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_19
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 399
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a82a5cd81bc4290800000000000000
+      internalID: -7904748023477794209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_20
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 382
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6a78fdd657f98a60800000000000000
+      internalID: 7676938992293018222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marcadortiempo_21
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 200
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a04163353444260800000000000000
+      internalID: 7080858538801891935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      marcadortiempo_0: -3624355412595806838
+      marcadortiempo_1: 3799789189660492135
+      marcadortiempo_10: -6657185838721606775
+      marcadortiempo_11: -8188081425005518860
+      marcadortiempo_12: 1488363712980180798
+      marcadortiempo_13: 8158668398221262165
+      marcadortiempo_14: -7436612845037001329
+      marcadortiempo_15: 5243808117824563887
+      marcadortiempo_16: -8600859489817745667
+      marcadortiempo_17: 9006013684971872359
+      marcadortiempo_18: 488691572184304526
+      marcadortiempo_19: -7904748023477794209
+      marcadortiempo_2: -2781584071667511214
+      marcadortiempo_20: 7676938992293018222
+      marcadortiempo_21: 7080858538801891935
+      marcadortiempo_3: -8676714678446317566
+      marcadortiempo_4: -8037861890002264765
+      marcadortiempo_5: -1233507193321414687
+      marcadortiempo_6: -5884030213009940966
+      marcadortiempo_7: -3938425322640951418
+      marcadortiempo_8: 7251180071662431724
+      marcadortiempo_9: -1928877905563494145
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
