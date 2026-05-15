@@ -1,11 +1,14 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameButton;
     [SerializeField] private GameObject otherButton;
     [SerializeField] private GameDataService gameDataService;
+    [SerializeField] private Text partidoContra;
 
     void Start()
     {
@@ -27,7 +30,10 @@ public class MainMenuManager : MonoBehaviour
             gameButton.SetActive(true);
         }
 
-        Debug.Log($"Partido activo encontrado: {JsonUtility.ToJson(data)}");
+        if (partidoContra != null)
+            partidoContra.text = "vs. " + data.opposing_team_name;
+
+        Debug.Log($"Partido activo encontrado");
     }
 
     private void OnNoGame()
