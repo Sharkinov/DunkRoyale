@@ -50,9 +50,13 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 /warnaserror+:NU1605
 
 [sourceFiles]
-Assets/Scripts/Supabase/
- SupabaseConfig.cs
- SupabaseSettings.cs
+Assets/Scripts/
+ Inicio/MainMenuManager.cs
+ Supabase/
+  ActiveGameData.cs
+  GameDataService.cs
+  SupabaseConfig.cs
+  SupabaseSettings.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 
 [metadataReferences]
