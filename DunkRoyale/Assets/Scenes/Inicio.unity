@@ -310,7 +310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: vs. Golden State
+  m_Text: 
 --- !u!222 &413143156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1397,6 +1397,7 @@ MonoBehaviour:
   gameButton: {fileID: 545527075}
   otherButton: {fileID: 39502369}
   gameDataService: {fileID: 575247960}
+  partidoContra: {fileID: 413143155}
 --- !u!4 &2065935533
 Transform:
   m_ObjectHideFlags: 0
