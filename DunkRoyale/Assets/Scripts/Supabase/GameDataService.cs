@@ -10,9 +10,10 @@ public class GameDataService : MonoBehaviour
     {
         public ActiveGameData[] items;
     }
-
+    //Obtener el juego de vista marcador activo
     public IEnumerator GetActiveGame(Action<ActiveGameData> onSuccess, Action onEmpty)
     {
+        //solamente se acepta 1
         var url = SupabaseConfig.Instance.SupabaseUrl + "/rest/v1/v_marcador_activo?limit=1";
         using (var request = UnityWebRequest.Get(url))
         {
@@ -25,13 +26,13 @@ public class GameDataService : MonoBehaviour
             request.SetRequestHeader("Accept-Profile", "simulacion_juego");
 
             yield return request.SendWebRequest();
-
+            //si se acaba la sesion o no tiene permisos marca error
             if (request.result != UnityWebRequest.Result.Success)
             {
                 Debug.LogError($"GetActiveGame failed: {request.error}");
                 yield break;
             }
-
+            
             var responseText = request.downloadHandler.text;
             if (string.IsNullOrWhiteSpace(responseText) || responseText.Trim() == "[]")
             {
