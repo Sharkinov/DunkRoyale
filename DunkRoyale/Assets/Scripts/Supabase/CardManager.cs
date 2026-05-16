@@ -9,7 +9,7 @@ public class CardManager : MonoBehaviour
     private GameDataService gameDataService;
 
     [Header("Card UI Slots")]
-    public Image[] cardImages;
+    public Button[] cardButtons;
     public Text[] cardCosts;
 
     [Header("Placeholder")]
@@ -17,6 +17,11 @@ public class CardManager : MonoBehaviour
 
     [HideInInspector]
     public UserDeckItem[] loadedCards;
+
+    [HideInInspector]
+    public int selectedCardIndex = -1;
+
+    private Image[] cardImages;
 
     void Start()
     {
@@ -33,25 +38,42 @@ public class CardManager : MonoBehaviour
         ));
     }
 
+    void OnCardClicked(int index)
+    {
+        // Si clickeas la misma carta, deselecciona
+        if (selectedCardIndex == index)
+        {
+            selectedCardIndex = -1;
+            GridManager.Instance.HideZones();
+            return;
+        }
+
+        selectedCardIndex = index;
+        GridManager.Instance.ShowZones();
+    }
+
     void DisplayCards()
     {
-        int cardsToShow = Mathf.Min(cardImages.Length, loadedCards.Length);
+        int cardsToShow = Mathf.Min(cardButtons.Length, loadedCards.Length);
 
-        for (int i = 0; i < cardImages.Length; i++)
+        for (int i = 0; i < cardButtons.Length; i++)
         {
             if (i < cardsToShow)
             {
                 // show placeholder while loading
-                cardImages[i].sprite = defaultSprite;
+                cardButtons[i].image.sprite = defaultSprite;
 
                 // load real card image from web_url
                 StartCoroutine(LoadImageFromUrl(
                     loadedCards[i].card.web_url,
-                    cardImages[i]
+                    cardButtons[i].image
                 ));
 
                 if (cardCosts[i] != null)
                     cardCosts[i].text = loadedCards[i].card.gatorade_cost.ToString();
+
+                int index = i;
+                cardButtons[i].onClick.AddListener(() => OnCardClicked(index));
             }
         }
     }
@@ -84,4 +106,5 @@ public class CardManager : MonoBehaviour
             }
         }
     }
+    
 }
