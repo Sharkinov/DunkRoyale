@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: bb5a7b10fff982a4d9bcedc19ccad308
+guid: 4b62031a0344c9740b994df374e592b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3642005466501229764
-    second: LakersBG_0
+      213: -2375320295686539536
+    second: LoserBanner_0
+  - first:
+      213: 3179040964892790009
+    second: LoserBanner_1
+  - first:
+      213: 513871180564207300
+    second: LoserBanner_2
+  - first:
+      213: -8013886633710003751
+    second: LoserBanner_3
+  - first:
+      213: -6557201668361199462
+    second: LoserBanner_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LakersBG_0
+      name: LoserBanner_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 0
-        width: 768
-        height: 1376
+        width: 1494
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4cc26d4fca00b8230800000000000000
-      internalID: 3642005466501229764
+      spriteID: 0f6f3dba6ca290fd0800000000000000
+      internalID: -2375320295686539536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoserBanner_1
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 745
+        width: 75
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc89de0ae83e1c20800000000000000
+      internalID: 3179040964892790009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoserBanner_2
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 767
+        width: 73
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c617d9bd13a12700800000000000000
+      internalID: 513871180564207300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoserBanner_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 379
+        width: 49
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9d677e094f8c090800000000000000
+      internalID: -8013886633710003751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoserBanner_4
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 375
+        width: 53
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a906bbcf2d32005a0800000000000000
+      internalID: -6557201668361199462
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LakersBG_0: 3642005466501229764
+      LoserBanner_0: -2375320295686539536
+      LoserBanner_1: 3179040964892790009
+      LoserBanner_2: 513871180564207300
+      LoserBanner_3: -8013886633710003751
+      LoserBanner_4: -6557201668361199462
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
