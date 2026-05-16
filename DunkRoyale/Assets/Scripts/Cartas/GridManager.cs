@@ -9,6 +9,8 @@ public class GridManager : MonoBehaviour
 
     [Header("Prefab del personaje a instanciar")]
     public GameObject characterPrefab;
+    [Header("Zona donde NO se dropea")]
+    public GameObject zonanodrop;
 
     void Awake()
     {
@@ -20,12 +22,16 @@ public class GridManager : MonoBehaviour
     {
         foreach(var zone in zones)
             zone.SetActive(true);
+
+        zonanodrop.SetActive(true);
     }
 
     public void HideZones()
     {
         foreach (var zone in zones)
             zone.SetActive(false);
+
+        zonanodrop.SetActive(false);
     }
     public void OnZoneClicked(Vector3 worldPosition)
     {
