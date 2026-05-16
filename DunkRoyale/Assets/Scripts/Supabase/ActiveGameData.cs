@@ -1,5 +1,6 @@
 using System;
 
+//Clase para obtener las cosas de vista marcador
 [Serializable]
 public class ActiveGameData
 {
