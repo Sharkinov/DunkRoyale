@@ -8078,6 +8078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 895591894}
+  - component: {fileID: 895591895}
   m_Layer: 5
   m_Name: ElixirBar
   m_TagString: Untagged
@@ -8106,6 +8107,21 @@ RectTransform:
   m_AnchoredPosition: {x: 217, y: -589}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &895591895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895591893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014a3e5a17af6984180d9f57f245445d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElixirBar
+  elixirImage: {fileID: 199909218}
+  maxElixir: 10
+  recargaAmount: 1
 --- !u!1 &911448812
 GameObject:
   m_ObjectHideFlags: 0

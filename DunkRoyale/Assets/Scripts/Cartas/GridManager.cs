@@ -38,6 +38,14 @@ public class GridManager : MonoBehaviour
         var cardManager = Object.FindAnyObjectByType<CardManager>();
         if (cardManager.selectedCardIndex == -1) return;
 
+        float cost = cardManager.loadedCards[cardManager.selectedCardIndex].card.gatorade_cost;
+
+        var elixirBar = Object.FindAnyObjectByType<ElixirBar>();
+        if (!elixirBar.TrySpend(cost))
+        {
+            Debug.Log("No hay elixir jeje");
+            return;
+        }
         Instantiate(characterPrefab, worldPosition, Quaternion.identity);
 
         cardManager.selectedCardIndex = -1;
