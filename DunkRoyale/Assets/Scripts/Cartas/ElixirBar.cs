@@ -8,7 +8,7 @@ public class ElixirBar : MonoBehaviour
 
     [Header("Config")]
     public float maxElixir = 10f;
-    public float recargaAmount = 1f;
+    public float recargaAmount = 0.1f;
     private float currentElixir;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -36,19 +36,25 @@ public class GridManager : MonoBehaviour
     public void OnZoneClicked(Vector3 worldPosition)
     {
         var cardManager = Object.FindAnyObjectByType<CardManager>();
-        if (cardManager.selectedCardIndex == -1) return;
 
-        float cost = cardManager.loadedCards[cardManager.selectedCardIndex].card.gatorade_cost;
+        if (cardManager.selectedCardIndex == -1)
+        {
+            cardManager.ShowWarning();
+            return;
+        }
+
+        int slot = cardManager.selectedCardIndex;
+        float cost = cardManager.loadedCards[cardManager.visibleSlots[slot]].card.gatorade_cost;
 
         var elixirBar = Object.FindAnyObjectByType<ElixirBar>();
         if (!elixirBar.TrySpend(cost))
         {
-            Debug.Log("No hay elixir jeje");
+            cardManager.ShowWarning();
             return;
         }
-        Instantiate(characterPrefab, worldPosition, Quaternion.identity);
 
-        cardManager.selectedCardIndex = -1;
+        Instantiate(characterPrefab, worldPosition, Quaternion.identity);
+        cardManager.ConsumeSelectedCard();
         HideZones();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
