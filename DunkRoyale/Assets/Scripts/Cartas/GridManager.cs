@@ -13,6 +13,9 @@ public class GridManager : MonoBehaviour
     [Header("Zona donde NO se dropea")]
     public GameObject zonanodrop;
 
+    [Header("Midline para combate")]
+    public Transform midline;
+
     void Awake()
     {
         Instance=this;
@@ -25,6 +28,11 @@ public class GridManager : MonoBehaviour
             zone.SetActive(true);
 
         zonanodrop.SetActive(true);
+    }
+
+    public float GetMidlineY()
+    {
+        return midline.position.y;
     }
 
     public void HideZones()
@@ -46,6 +54,7 @@ public class GridManager : MonoBehaviour
         Debug.LogWarning($"Prefab not found for: {spriteName}");
         return characterPrefabs[0];
     }
+    
 
     public void OnZoneClicked(Vector3 worldPosition)
     {
@@ -72,10 +81,17 @@ public class GridManager : MonoBehaviour
         Debug.Log($"Looking for prefab: '{spriteName}'");
         GameObject prefabToSpawn = GetPrefabForCharacter(spriteName);
 
-        Instantiate(prefabToSpawn, worldPosition, Quaternion.identity);
+        GameObject player = Instantiate(prefabToSpawn, worldPosition, Quaternion.identity);
+        var combat = player.GetComponent<PlayerCombat>();
+        if (combat != null)
+            combat.Initialize(card.attack, card.defense, card.velocity);
+
+        
+
         cardManager.ConsumeSelectedCard();
         HideZones();
     }
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
