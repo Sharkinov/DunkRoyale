@@ -38,7 +38,7 @@ public class CardManager : MonoBehaviour
         ));
     }
 
-    void OnCardClicked(int index)
+    public void OnCardClicked(int index)
     {
         // Si clickeas la misma carta, deselecciona
         if (selectedCardIndex == index)
@@ -71,7 +71,7 @@ public class CardManager : MonoBehaviour
 
                 if (cardCosts[i] != null)
                     cardCosts[i].text = loadedCards[i].card.gatorade_cost.ToString();
-
+                cardButtons[i].onClick.RemoveAllListeners();
                 int index = i;
                 cardButtons[i].onClick.AddListener(() => OnCardClicked(index));
             }

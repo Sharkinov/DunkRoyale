@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1192312406961108194}
   - component: {fileID: -5234511829425553066}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Kobe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1940738496428130850, guid: 1070990d51859d14292ba473ee8d0f79, type: 3}
+  m_Sprite: {fileID: 1594574145091028313, guid: 36480741b4f434648a8252910f5c7c71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 8198949235673426451}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eff6fc1652745594595025cd19169784, type: 2}
+  m_Controller: {fileID: 9100000, guid: b3da02fa961cb564595139a7cf2f1dfd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
