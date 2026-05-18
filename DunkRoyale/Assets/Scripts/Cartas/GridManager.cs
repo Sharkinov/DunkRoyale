@@ -68,7 +68,7 @@ public class GridManager : MonoBehaviour
             return;
         }
 
-        string spriteName = card.sprite_id.ToString();
+        string spriteName = card.sprite?.name.Replace(" ", "");
         Debug.Log($"Looking for prefab: '{spriteName}'");
         GameObject prefabToSpawn = GetPrefabForCharacter(spriteName);
 
