@@ -15,9 +15,10 @@ public class PlayerCombat : MonoBehaviour
     public float fightRange = 0.4f; // raise from 0.5f to 1f// distancia para pelear
 
     [Header("UI Bars")]
-    public GameObject statBarPrefab;
-    private Image attackBarImage;
-    private Image defenseBarImage;
+    public SpriteRenderer attackBarImage;
+    public SpriteRenderer defenseBarImage;
+    private int maxAttack;
+    private int maxDefense;
 
     [Header("Hit Effects")]
     public float flashDuration = 0.2f;
@@ -38,7 +39,6 @@ public class PlayerCombat : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         fatigueTimer = fatigueTime;
-        SpawnStatBars();
     }
 
     public void Update()
@@ -136,28 +136,35 @@ public class PlayerCombat : MonoBehaviour
         rb.linearVelocity = direction * movement.speed;
     }
 
-    void SpawnStatBars()
-    {
-        if (statBarPrefab == null) return;
+    // Ya no lo ocupo
+    // void SpawnStatBars()
+    // {
+    //     if (statBarPrefab == null) return;
 
-        GameObject bars = Instantiate(statBarPrefab, transform);
-        bars.transform.localPosition = new Vector3(0, 1.2f, 0);
+    //     GameObject bars = Instantiate(statBarPrefab, transform);
+    //     bars.transform.localPosition = new Vector3(0, 1.2f, 0);
 
-        var images = bars.GetComponentsInChildren<Image>();
-        if (images.Length >= 2)
-        {
-            attackBarImage = images[0];
-            defenseBarImage = images[1];
-            UpdateBars();
-        }
-    }
+    //     var images = bars.GetComponentsInChildren<Image>();
+    //     if (images.Length >= 2)
+    //     {
+    //         attackBarImage = images[0];
+    //         defenseBarImage = images[1];
+    //         UpdateBars();
+    //     }
+    // }
 
     void UpdateBars()
     {
         if (attackBarImage != null)
-            attackBarImage.fillAmount = (float)attack / 100f;
+        {
+            float pct = maxDefense > 0 ? (float)attack / maxAttack : 0f;
+            attackBarImage.size = new Vector2(pct, attackBarImage.size.y);
+        } 
         if (defenseBarImage != null)
-            defenseBarImage.fillAmount = (float)defense / 100f;
+        {
+            float pct = maxDefense > 0 ? (float)defense / maxDefense: 0f;
+            defenseBarImage.size = new Vector2(pct, defenseBarImage.size.y);
+        }
     }
 
     void StartConfrontation(PlayerCombat opponent)
@@ -276,7 +283,10 @@ IEnumerator FlashRed()
     {
         attack = atk;
         defense = def;
+        maxAttack = atk;
+        maxDefense = def;
         velocity = vel;
+        fatigueTimer = fatigueTime;
         movement = GetComponent<CharacterMove>();
         if (movement != null)
             movement.speed = velocity;
