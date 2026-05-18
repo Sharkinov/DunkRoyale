@@ -7,8 +7,9 @@ public class GridManager : MonoBehaviour
     [Header("Zona para dropear al personaje")]
     public GameObject[] zones;
 
-    [Header("Prefab del personaje a instanciar")]
-    public GameObject characterPrefab;
+    [Header("Prefabs de personajes")]
+    public GameObject[] characterPrefabs;
+
     [Header("Zona donde NO se dropea")]
     public GameObject zonanodrop;
 
@@ -33,6 +34,19 @@ public class GridManager : MonoBehaviour
 
         zonanodrop.SetActive(false);
     }
+
+    GameObject GetPrefabForCharacter(string spriteName)
+    {
+        foreach (var prefab in characterPrefabs)
+        {
+            if (prefab.name == spriteName)
+                return prefab;
+        }
+        
+        Debug.LogWarning($"Prefab not found for: {spriteName}");
+        return characterPrefabs[0];
+    }
+
     public void OnZoneClicked(Vector3 worldPosition)
     {
         var cardManager = Object.FindAnyObjectByType<CardManager>();
@@ -44,7 +58,8 @@ public class GridManager : MonoBehaviour
         }
 
         int slot = cardManager.selectedCardIndex;
-        float cost = cardManager.loadedCards[cardManager.visibleSlots[slot]].card.gatorade_cost;
+        var card = cardManager.loadedCards[cardManager.visibleSlots[slot]].card;
+        float cost = card.gatorade_cost;
 
         var elixirBar = Object.FindAnyObjectByType<ElixirBar>();
         if (!elixirBar.TrySpend(cost))
@@ -53,7 +68,11 @@ public class GridManager : MonoBehaviour
             return;
         }
 
-        Instantiate(characterPrefab, worldPosition, Quaternion.identity);
+        string spriteName = card.sprite_id.ToString();
+        Debug.Log($"Looking for prefab: '{spriteName}'");
+        GameObject prefabToSpawn = GetPrefabForCharacter(spriteName);
+
+        Instantiate(prefabToSpawn, worldPosition, Quaternion.identity);
         cardManager.ConsumeSelectedCard();
         HideZones();
     }
