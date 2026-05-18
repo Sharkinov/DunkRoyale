@@ -60,8 +60,7 @@ public class GameDataService : MonoBehaviour
     public IEnumerator GetPlayerStats(Action<UserDeckItem[]> onSuccess, Action onError)
     {
         var userId = SupabaseConfig.Instance.UserId;
-        var url = SupabaseConfig.Instance.SupabaseUrl 
-            + $"/rest/v1/deck?select=slot,card(*)&user_id=eq.{userId}&order=slot.asc";
+        var url = SupabaseConfig.Instance.SupabaseUrl + $"/rest/v1/deck?select=slot,card(*,sprite(name))&user_id=eq.{userId}&order=slot.asc";
         
         using (var request = UnityWebRequest.Get(url))
         {

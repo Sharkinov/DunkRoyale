@@ -2,6 +2,12 @@ using System;
 using UnityEngine;
 
 [Serializable]
+public class SpriteInfo
+{
+    public string name;
+}
+
+[Serializable]
 public class PlayerStats
 {
     public string card_id;
@@ -14,6 +20,7 @@ public class PlayerStats
     public int sprite_id;
     public string web_url;
     public string pixel_url;
+    public SpriteInfo sprite;
 }
 
 [Serializable]

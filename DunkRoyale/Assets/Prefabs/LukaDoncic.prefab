@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1192312406961108194}
   - component: {fileID: -5234511829425553066}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: LukaDoncic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.769624, y: 1.8304908, z: 0}
-  m_LocalScale: {x: 0.021562358, y: 0.021562358, z: 0.021562358}
+  m_LocalScale: {x: 0.7189526, y: 0.7189526, z: 0.7189526}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1940738496428130850, guid: 1070990d51859d14292ba473ee8d0f79, type: 3}
+  m_Sprite: {fileID: 7208960914452431651, guid: 43876ed72fa11e946832a94add5b1d0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,8 +129,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.35156828, y: -1.8164277}
-  m_Size: {x: 30.297289, y: 38.969307}
+  m_Offset: {x: -0.031201566, y: -0.041766625}
+  m_Size: {x: 1.0253706, y: 1.1936322}
   m_Direction: 0
 --- !u!95 &2248917456781593370
 Animator:
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 8198949235673426451}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eff6fc1652745594595025cd19169784, type: 2}
+  m_Controller: {fileID: 9100000, guid: b255239e7d483de4f8dba56cccb45fc7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
