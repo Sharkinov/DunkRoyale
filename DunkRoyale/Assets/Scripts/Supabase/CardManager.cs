@@ -84,7 +84,7 @@ public class CardManager : MonoBehaviour
         }
     }
 
-    void OnCardClicked(int slotIndex)
+    public void OnCardClicked(int slotIndex)
     {
         if (visibleSlots[slotIndex] == -1) return;
         // Si clickeas la misma carta, deselecciona
