@@ -61,8 +61,11 @@ public class GameDataService : MonoBehaviour
     public IEnumerator GetPlayerStats(Action<UserDeckItem[]> onSuccess, Action onError)
     {
         var userId = SupabaseConfig.Instance.UserId;
-        var url = SupabaseConfig.Instance.SupabaseUrl + $"/rest/v1/deck?select=card(*,sprite(name))&user_id=eq.{userId}";
-        
+        // Antes: /rest/v1/deck?select=card(*,sprite(name))&user_id=eq.{userId}
+        // Ahora: user_card con in_deck=true, join directo a card y sprite
+        var url = SupabaseConfig.Instance.SupabaseUrl
+            + $"/rest/v1/user_card?select=card(*,sprite(name))&user_id=eq.{userId}&in_deck=eq.true";
+
         using (var request = UnityWebRequest.Get(url))
         {
             var headers = SupabaseConfig.Instance.GetHeaders();
