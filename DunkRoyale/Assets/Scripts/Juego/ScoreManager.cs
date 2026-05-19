@@ -18,6 +18,13 @@ public class ScoreManager : MonoBehaviour
     private int npcScore = 0;
     private bool matchSaved  = false;
 
+    [Header("Final Game Panel UI")]
+    public Text finalScore1Text;  
+    public Text finalScore2Text;  
+
+    public int GetLakersScore() => lakersScore;
+    public int GetNpcScore() => npcScore;
+
     void Awake()
     {
         Instance = this;
@@ -40,7 +47,16 @@ public class ScoreManager : MonoBehaviour
     {
         if (matchSaved) return;
         matchSaved = true;
+
+        if (finalScore1Text != null) finalScore1Text.text = lakersScore.ToString();
+        if (finalScore2Text != null) finalScore2Text.text = npcScore.ToString();
+
         StartCoroutine(SaveMatch());
+    }
+
+    public bool DidPlayerWin()
+    {
+        return lakersScore > npcScore;
     }
 
     IEnumerator SaveMatch()
