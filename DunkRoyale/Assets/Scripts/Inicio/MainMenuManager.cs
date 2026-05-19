@@ -34,7 +34,11 @@ public class MainMenuManager : MonoBehaviour
         if (partidoContra != null)
             partidoContra.text = "vs. " + data.opposing_team_name;
 
-        Debug.Log($"Partido activo encontrado");
+        PlayerPrefs.SetInt("OpposingTeamId", data.opposing_team_id);
+        PlayerPrefs.SetString("OpposingTeamName", data.opposing_team_name ?? "");
+        PlayerPrefs.Save();
+
+        Debug.Log($"Partido activo encontrado vs {data.opposing_team_name}");
     }
 
     private void OnNoGame()
