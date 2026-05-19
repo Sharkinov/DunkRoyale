@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 1192312406961108194}
   - component: {fileID: -5234511829425553066}
   - component: {fileID: 250074486497031647}
+  - component: {fileID: 5275426673809347547}
   m_Layer: 0
   m_Name: NPC 1
   m_TagString: Untagged
@@ -446,6 +447,27 @@ MonoBehaviour:
   defenseBarImage: {fileID: 3199707168195318169}
   flashDuration: 0.2
   bounceForce: 0.5
+--- !u!114 &5275426673809347547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8198949235673426451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c754cd78b8b7b9b4397c3c9c3b4469d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JerseyController
+  jerseys:
+  - jerseySpriteName: CelticsPlayer
+    jerseyObject: {fileID: 1949916623624640654}
+  - jerseySpriteName: GenericPlayers
+    jerseyObject: {fileID: 4396903141777648212}
+  - jerseySpriteName: SpursPlayer
+    jerseyObject: {fileID: 4888789701972162177}
+  - jerseySpriteName: WarriorsPlayers
+    jerseyObject: {fileID: 8687834347401164164}
 --- !u!1001 &673824348469911447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -528,6 +550,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6082969934288046387, guid: 5d10e125aed9a9249a1d1d765e6c29e9, type: 3}
   m_PrefabInstance: {fileID: 673824348469911447}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8687834347401164164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8198949235673426451, guid: 5d10e125aed9a9249a1d1d765e6c29e9, type: 3}
+  m_PrefabInstance: {fileID: 673824348469911447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3607661165177805970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -605,6 +632,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22a3065094fa434bb042fd3b5f869ab, type: 3}
+--- !u!1 &4888789701972162177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8198949235673426451, guid: a22a3065094fa434bb042fd3b5f869ab, type: 3}
+  m_PrefabInstance: {fileID: 3607661165177805970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7384760283559613857 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6082969934288046387, guid: a22a3065094fa434bb042fd3b5f869ab, type: 3}
@@ -692,6 +724,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6082969934288046387, guid: c69ea570175da6d4880f9919a04bf5a4, type: 3}
   m_PrefabInstance: {fileID: 5533926681883099207}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4396903141777648212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8198949235673426451, guid: c69ea570175da6d4880f9919a04bf5a4, type: 3}
+  m_PrefabInstance: {fileID: 5533926681883099207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7694393595519890077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -760,11 +797,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: CelticsPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 8198949235673426451, guid: 797a2f6a1ade23d4d8ce8970332f4a96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 797a2f6a1ade23d4d8ce8970332f4a96, type: 3}
+--- !u!1 &1949916623624640654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8198949235673426451, guid: 797a2f6a1ade23d4d8ce8970332f4a96, type: 3}
+  m_PrefabInstance: {fileID: 7694393595519890077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4516255936060210094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6082969934288046387, guid: 797a2f6a1ade23d4d8ce8970332f4a96, type: 3}

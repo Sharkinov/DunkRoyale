@@ -164,6 +164,11 @@ public class NPCSpawner : MonoBehaviour
             int vel = archetype?.final_velocity ?? fallbackVelocity;
             combat.Initialize(atk, def, vel);
         }
+        // Aplicar camisa — el nombre ya viene del archetype
+        var jersey = npc.GetComponent<JerseyController>();
+        Debug.Log($"[NPCSpawner] JerseyController encontrado: {jersey != null}, spriteName: {archetype?.jersey_sprite_name}");
+        if (jersey != null)
+            jersey.ApplyJersey(archetype?.jersey_sprite_name);
 
         activeNpcs.Add(npc);
         Debug.Log($"[NPCSpawner] Spawneado: {archetype?.archetype_name ?? "Fallback"} " +
