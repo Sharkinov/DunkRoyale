@@ -59,9 +59,17 @@ public class PlayerCombat : MonoBehaviour
 
         // mirror sprite based on horizontal movement
         if (rb.linearVelocity.x > 0.1f)
-            spriteRenderer.flipX = false;
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), 
+                                                transform.localScale.y, 
+                                                transform.localScale.z);
+        }
         else if (rb.linearVelocity.x < -0.1f)
-            spriteRenderer.flipX = true;
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), 
+                                                transform.localScale.y, 
+                                                transform.localScale.z);
+        }
 
         if (inConfrontation) return;
 
@@ -251,19 +259,21 @@ IEnumerator RunConfrontation(PlayerCombat opponent)
 
 IEnumerator FlashRed()
 {
-    spriteRenderer.color = Color.red;
-    
+    var allRenderers = GetComponentsInChildren<SpriteRenderer>();
+    foreach (var sr in allRenderers) sr.color = Color.red;
+
     float dir = Random.value > 0.5f ? 1f : -1f;
     rb.bodyType = RigidbodyType2D.Dynamic;
     rb.linearVelocity = new Vector2(dir * bounceForce, 0f);
 
-    yield return new WaitForSeconds(0.08f); // ← shorter, was 0.2f
+    yield return new WaitForSeconds(0.08f);
     
     rb.linearVelocity = Vector2.zero;
-    rb.bodyType = RigidbodyType2D.Kinematic; // ← freeze faster
+    rb.bodyType = RigidbodyType2D.Kinematic;
 
     yield return new WaitForSeconds(0.12f);
-    spriteRenderer.color = Color.white;
+    
+    foreach (var sr in allRenderers) sr.color = Color.white;
 }
 
     public void BenchPlayer()
