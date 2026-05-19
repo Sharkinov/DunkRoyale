@@ -296,8 +296,8 @@ MonoBehaviour:
   isEnemy: 0
   minX: -2.2
   maxX: 2.2
-  minY: -1.7
-  maxY: 6.2
+  minY: -3
+  maxY: 3.5
 --- !u!50 &-5234511829425553066
 Rigidbody2D:
   serializedVersion: 5
@@ -347,6 +347,8 @@ MonoBehaviour:
   defenseBarImage: {fileID: 132775909925088138}
   flashDuration: 0.2
   bounceForce: 0.5
+  isExhausted: 0
+  basketTarget: {fileID: 0}
 --- !u!1 &8468064614381746694
 GameObject:
   m_ObjectHideFlags: 0

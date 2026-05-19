@@ -29,9 +29,12 @@ public class PlayerCombat : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private float fatigueTimer;
-    private bool isExhausted = false;
+    public bool isExhausted = false;
     private bool inConfrontation = false;
     private PlayerCombat targetOpponent = null;
+
+    [Header("Basket Target")]
+    public Transform basketTarget;
 
     void Start()
     {
@@ -93,7 +96,11 @@ public class PlayerCombat : MonoBehaviour
         }
         else
         {
-            movement.Resume(); // ← this was missing, NPCs just froze after a confrontation
+            // Sin enemigos — ir hacia el basket objetivo
+            if (basketTarget != null)
+                MoveToward(basketTarget.position);
+            else
+                movement.Resume();
         }
     }
 
@@ -259,21 +266,32 @@ IEnumerator RunConfrontation(PlayerCombat opponent)
 
 IEnumerator FlashRed()
 {
+    // Solo flashear el sprite del personaje y la camisa, NO las barras
     var allRenderers = GetComponentsInChildren<SpriteRenderer>();
-    foreach (var sr in allRenderers) sr.color = Color.red;
+    var gameRenderers = System.Array.FindAll(allRenderers, sr => 
+        sr != attackBarImage && sr != defenseBarImage);
+    
+    foreach (var sr in gameRenderers) sr.color = Color.red;
 
     float dir = Random.value > 0.5f ? 1f : -1f;
     rb.bodyType = RigidbodyType2D.Dynamic;
     rb.linearVelocity = new Vector2(dir * bounceForce, 0f);
 
     yield return new WaitForSeconds(0.08f);
-    
     rb.linearVelocity = Vector2.zero;
     rb.bodyType = RigidbodyType2D.Kinematic;
 
+    Vector3 pos = transform.position;
+    var move = GetComponent<CharacterMove>();
+    if (move != null)
+    {
+        pos.x = Mathf.Clamp(pos.x, move.minX, move.maxX);
+        pos.y = Mathf.Clamp(pos.y, move.minY, move.maxY);
+        transform.position = pos;
+    }
+
     yield return new WaitForSeconds(0.12f);
-    
-    foreach (var sr in allRenderers) sr.color = Color.white;
+    foreach (var sr in gameRenderers) sr.color = Color.white;
 }
 
     public void BenchPlayer()
