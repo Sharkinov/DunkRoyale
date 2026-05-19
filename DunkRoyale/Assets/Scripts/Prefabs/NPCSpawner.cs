@@ -11,7 +11,7 @@ public class NPCSpawner : MonoBehaviour
     public Transform[] spawnPoints; // puntos en el lado del NPC
 
     [Header("Fallback Config (si Supabase falla)")]
-    public float fallbackSpawnMin    = 7f;
+    public float fallbackSpawnMin    = 6f;
     public float fallbackSpawnMax    = 11f;
     public int   fallbackMaxOnCourt  = 3;
     public int   fallbackAttack      = 50;
@@ -96,6 +96,9 @@ public class NPCSpawner : MonoBehaviour
     }
     void Update()
     {
+        // Limpiar NPCs destruidos de la lista
+        activeNpcs.RemoveAll(npc => npc == null);
+
         // recargar elixir del NPC
         if (npcElixir < maxElixir)
         {
