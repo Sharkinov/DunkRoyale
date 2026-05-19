@@ -20,7 +20,8 @@ public class GameDataService : MonoBehaviour
     public IEnumerator GetActiveGame(Action<ActiveGameData> onSuccess, Action onEmpty)
     {
         //solamente se acepta 1
-        var url = SupabaseConfig.Instance.SupabaseUrl + "/rest/v1/v_marcador_activo?limit=1";
+        // var url = SupabaseConfig.Instance.SupabaseUrl + "/rest/v1/v_marcador_activo?limit=1";
+        var url = SupabaseConfig.Instance.SupabaseUrl + "/rest/v1/v_marcador_activo?select=opposing_team_id,opposing_team_name&limit=1";
         using (var request = UnityWebRequest.Get(url))
         {
             var headers = SupabaseConfig.Instance.GetHeaders();
@@ -60,7 +61,7 @@ public class GameDataService : MonoBehaviour
     public IEnumerator GetPlayerStats(Action<UserDeckItem[]> onSuccess, Action onError)
     {
         var userId = SupabaseConfig.Instance.UserId;
-        var url = SupabaseConfig.Instance.SupabaseUrl + $"/rest/v1/deck?select=slot,card(*,sprite(name))&user_id=eq.{userId}&order=slot.asc";
+        var url = SupabaseConfig.Instance.SupabaseUrl + $"/rest/v1/deck?select=card(*,sprite(name))&user_id=eq.{userId}";
         
         using (var request = UnityWebRequest.Get(url))
         {
@@ -81,6 +82,39 @@ public class GameDataService : MonoBehaviour
 
             var json = "{\"items\":" + request.downloadHandler.text + "}";
             var response = JsonUtility.FromJson<PlayerStatsResponse>(json);
+            onSuccess?.Invoke(response.items);
+        }
+    }
+    public IEnumerator GetNpcConfig(int teamId, int playerPower, Action<NPCArchetype[]> onSuccess, Action onError)
+    {
+        var url = SupabaseConfig.Instance.SupabaseUrl + $"/rest/v1/v_npc_config"
+            + $"?sim_team_id=eq.{teamId}" + $"&player_power_min=lte.{playerPower}"
+            + $"&player_power_max=gte.{playerPower}";
+        using (var request = UnityWebRequest.Get(url))
+        {
+            var headers = SupabaseConfig.Instance.GetHeaders();
+            foreach (var header in headers)
+                request.SetRequestHeader(header.Key, header.Value);
+            yield return request.SendWebRequest();
+
+            Debug.Log($"obtener npc config respuesta: {request.downloadHandler.text}");
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"GetNpcConfig failed: {request.error}");
+                onError?.Invoke();
+                yield break;
+            }
+
+            var responseText = request.downloadHandler.text;
+            if (string.IsNullOrWhiteSpace(responseText) || responseText.Trim() == "[]")
+            {
+                Debug.LogWarning("GetNpcConfig: no archetypes found, using defaults.");
+                onError?.Invoke();
+                yield break;
+            }
+
+            var json = "{\"items\":" + responseText + "}";
+            var response = JsonUtility.FromJson<NpcArchetypeResponse>(json);
             onSuccess?.Invoke(response.items);
         }
     }

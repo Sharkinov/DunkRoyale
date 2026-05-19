@@ -26,6 +26,5 @@ public class PlayerStats
 [Serializable]
 public class UserDeckItem
 {
-    public int slot;
     public PlayerStats card;
 }
