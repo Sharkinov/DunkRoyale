@@ -12777,6 +12777,63 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &1367684994
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6082969934288046387, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0902755
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082969934288046387, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2272847
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082969934288046387, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082969934288046387, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082969934288046387, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082969934288046387, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082969934288046387, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082969934288046387, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082969934288046387, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082969934288046387, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198949235673426451, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
+      propertyPath: m_Name
+      value: NPC 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3be8bcc838e23944fa981208bebad5b6, type: 3}
 --- !u!1 &1380896172
 GameObject:
   m_ObjectHideFlags: 0
@@ -14102,6 +14159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
   lakersScoreText: {fileID: 797937795}
   npcScoreText: {fileID: 795540788}
+  creditsOnWin: 50
+  creditsOnLoss: 10
 --- !u!4 &1475756263
 Transform:
   m_ObjectHideFlags: 0
@@ -16810,11 +16869,14 @@ MonoBehaviour:
   - {fileID: 1746446888}
   - {fileID: 1722464299}
   - {fileID: 694271127}
-  minElixir: 2
+  fallbackSpawnMin: 7
+  fallbackSpawnMax: 11
+  fallbackMaxOnCourt: 3
+  fallbackAttack: 50
+  fallbackDefense: 50
+  fallbackVelocity: 2
   maxElixir: 10
   rechargeRate: 0.8
-  minSpawnInterval: 3
-  maxSpawnInterval: 7
 --- !u!1 &1796511733
 GameObject:
   m_ObjectHideFlags: 0
@@ -19562,3 +19624,4 @@ SceneRoots:
   - {fileID: 1671587087}
   - {fileID: 718700092}
   - {fileID: 1724978875}
+  - {fileID: 1367684994}
