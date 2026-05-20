@@ -86,7 +86,7 @@ public class PlayerCombat : MonoBehaviour
             if (dist <= fightRange)
             {
                 rb.linearVelocity = Vector2.zero;
-                if (!inConfrontation && !enemy.inConfrontation)
+                if (!inConfrontation)
                     StartConfrontation(enemy);
             }
             else
@@ -184,13 +184,22 @@ public class PlayerCombat : MonoBehaviour
 
     void StartConfrontation(PlayerCombat opponent)
     {
-        if (inConfrontation || opponent.inConfrontation) return;
+        // Si el opponent ya está en confrontación, únete
+        if (opponent.inConfrontation)
+        {
+            inConfrontation = true;
+            rb.linearVelocity = Vector2.zero;
+            movement.Stop();
+            StartCoroutine(JoinConfrontation(opponent));
+            return;
+        }
+
+        if (inConfrontation) return;
 
         inConfrontation = true;
         opponent.inConfrontation = true;
         targetOpponent = opponent;
 
-        // Hard zero before anything else
         rb.linearVelocity = Vector2.zero;
         opponent.rb.linearVelocity = Vector2.zero;
 
@@ -199,7 +208,6 @@ public class PlayerCombat : MonoBehaviour
 
         StartCoroutine(RunConfrontation(opponent));
     }
-
 IEnumerator RunConfrontation(PlayerCombat opponent)
 {
     while (true)
@@ -263,6 +271,49 @@ IEnumerator RunConfrontation(PlayerCombat opponent)
         // Both still standing — next round
     }
 }
+
+IEnumerator JoinConfrontation(PlayerCombat opponent)
+{
+    while (opponent != null && !opponent.isExhausted && inConfrontation)
+    {
+        StartCoroutine(FlashRed());
+        StartCoroutine(opponent.FlashRed());
+
+        yield return new WaitForSeconds(0.5f);
+
+        if (opponent == null || opponent.isExhausted)
+        {
+            inConfrontation = false;
+            movement.Resume();
+            yield break;
+        }
+
+        if (isExhausted)
+        {
+            inConfrontation = false;
+            yield break;
+        }
+
+        int damage = Mathf.Max(attack - opponent.defense, 1);
+        opponent.defense -= damage;
+        opponent.UpdateBars();
+
+        attack = Mathf.Max(attack - 1, 0);
+        UpdateBars();
+
+        if (opponent.defense <= 0)
+        {
+            opponent.BenchPlayer();
+            inConfrontation = false;
+            movement.Resume();
+            yield break;
+        }
+    }
+
+    inConfrontation = false;
+    movement.Resume();
+}
+
 
 IEnumerator FlashRed()
 {

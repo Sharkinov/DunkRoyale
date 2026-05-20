@@ -1,0 +1,988 @@
+fileFormatVersion: 2
+guid: 12040d8e1071cfd4c9972721d3c1d1ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8818156675110879592
+    second: areyouready_0
+  - first:
+      213: 9035356962954602935
+    second: areyouready_1
+  - first:
+      213: 8623305969650034645
+    second: areyouready_2
+  - first:
+      213: 2050209369328361261
+    second: areyouready_3
+  - first:
+      213: 5625719897810697710
+    second: areyouready_4
+  - first:
+      213: -283167629406811839
+    second: areyouready_5
+  - first:
+      213: 171426215798174819
+    second: areyouready_6
+  - first:
+      213: -7394561772296097264
+    second: areyouready_7
+  - first:
+      213: 8104734893833210532
+    second: areyouready_8
+  - first:
+      213: -5113953422522958680
+    second: areyouready_9
+  - first:
+      213: -280792375871097541
+    second: areyouready_10
+  - first:
+      213: -7041622429613551147
+    second: areyouready_11
+  - first:
+      213: 827666542479724183
+    second: areyouready_12
+  - first:
+      213: 5678830645894379304
+    second: areyouready_13
+  - first:
+      213: -2132479187789457529
+    second: areyouready_14
+  - first:
+      213: 155873407512379592
+    second: areyouready_15
+  - first:
+      213: 1253043533111558873
+    second: areyouready_16
+  - first:
+      213: 5448317782111192071
+    second: areyouready_17
+  - first:
+      213: -6333901623515792998
+    second: areyouready_18
+  - first:
+      213: 7892703168553244226
+    second: areyouready_19
+  - first:
+      213: -947054175340060398
+    second: areyouready_20
+  - first:
+      213: 896743473410307948
+    second: areyouready_21
+  - first:
+      213: -5712312400361938274
+    second: areyouready_22
+  - first:
+      213: -200099293567691118
+    second: areyouready_23
+  - first:
+      213: -3544702233745585892
+    second: areyouready_24
+  - first:
+      213: -4623171243248390996
+    second: areyouready_25
+  - first:
+      213: 1775833724350563455
+    second: areyouready_26
+  - first:
+      213: 6931237275983106008
+    second: areyouready_27
+  - first:
+      213: 6534112814648741392
+    second: areyouready_28
+  - first:
+      213: 215979510912307650
+    second: areyouready_29
+  - first:
+      213: -7580823855354638712
+    second: areyouready_30
+  - first:
+      213: -9046237420622137515
+    second: areyouready_31
+  - first:
+      213: 2535881303096296108
+    second: areyouready_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: areyouready_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 1024
+        height: 1524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89eb64e793d9f9580800000000000000
+      internalID: -8818156675110879592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_1
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1114
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9e2c35949046d70800000000000000
+      internalID: 9035356962954602935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_2
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1114
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7ee7657132ca770800000000000000
+      internalID: 8623305969650034645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_3
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1105
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f9ef51f8ec37c10800000000000000
+      internalID: 2050209369328361261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_4
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1114
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed7ad2d072921e40800000000000000
+      internalID: 5625719897810697710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_5
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 1110
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14941559a8cf11cf0800000000000000
+      internalID: -283167629406811839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_6
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1098
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364f6d92c37016200800000000000000
+      internalID: 171426215798174819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_7
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1098
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012bb940f3d316990800000000000000
+      internalID: -7394561772296097264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_8
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1096
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa44a9f17dc97070800000000000000
+      internalID: 8104734893833210532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_9
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1085
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac30a405769709b0800000000000000
+      internalID: -5113953422522958680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_10
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 1075
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35b09462dc6a1cf0800000000000000
+      internalID: -280792375871097541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_11
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1078
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1167855b1274e90800000000000000
+      internalID: -7041622429613551147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_12
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1086
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79ecaf0d5567c7b00800000000000000
+      internalID: 827666542479724183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_13
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1078
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827f22c72624fce40800000000000000
+      internalID: 5678830645894379304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_14
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1058
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78755e02a79e762e0800000000000000
+      internalID: -2132479187789457529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_15
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1087
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c084bcc906c92200800000000000000
+      internalID: 155873407512379592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_16
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1071
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d207375474b36110800000000000000
+      internalID: 1253043533111558873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_17
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1080
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7048e2a08205c9b40800000000000000
+      internalID: 5448317782111192071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_18
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1079
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99321828067918a0800000000000000
+      internalID: -6333901623515792998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_19
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1086
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2465737e6b3888d60800000000000000
+      internalID: 7892703168553244226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_20
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 947
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2112ec7ce336bd2f0800000000000000
+      internalID: -947054175340060398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_21
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 923
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c67754b107fd17c00800000000000000
+      internalID: 896743473410307948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_22
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 913
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e922e52132ac9b0b0800000000000000
+      internalID: -5712312400361938274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_23
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 904
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 296571fa0ca193df0800000000000000
+      internalID: -200099293567691118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_24
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 888
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c198f0b5910becec0800000000000000
+      internalID: -3544702233745585892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_25
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 894
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cace066bf3237dfb0800000000000000
+      internalID: -4623171243248390996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_26
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 873
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7403101d5705a810800000000000000
+      internalID: 1775833724350563455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_27
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 872
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df4be84493b03060800000000000000
+      internalID: 6931237275983106008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_28
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 879
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01e47775cf4ddaa50800000000000000
+      internalID: 6534112814648741392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_29
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 869
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1d0ba88305ff200800000000000000
+      internalID: 215979510912307650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_30
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 832
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e87c45ed08bc690800000000000000
+      internalID: -7580823855354638712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_31
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 793
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 557b8f5befe457280800000000000000
+      internalID: -9046237420622137515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: areyouready_32
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 634
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca20c970c92413320800000000000000
+      internalID: 2535881303096296108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      areyouready_0: -8818156675110879592
+      areyouready_1: 9035356962954602935
+      areyouready_10: -280792375871097541
+      areyouready_11: -7041622429613551147
+      areyouready_12: 827666542479724183
+      areyouready_13: 5678830645894379304
+      areyouready_14: -2132479187789457529
+      areyouready_15: 155873407512379592
+      areyouready_16: 1253043533111558873
+      areyouready_17: 5448317782111192071
+      areyouready_18: -6333901623515792998
+      areyouready_19: 7892703168553244226
+      areyouready_2: 8623305969650034645
+      areyouready_20: -947054175340060398
+      areyouready_21: 896743473410307948
+      areyouready_22: -5712312400361938274
+      areyouready_23: -200099293567691118
+      areyouready_24: -3544702233745585892
+      areyouready_25: -4623171243248390996
+      areyouready_26: 1775833724350563455
+      areyouready_27: 6931237275983106008
+      areyouready_28: 6534112814648741392
+      areyouready_29: 215979510912307650
+      areyouready_3: 2050209369328361261
+      areyouready_30: -7580823855354638712
+      areyouready_31: -9046237420622137515
+      areyouready_32: 2535881303096296108
+      areyouready_4: 5625719897810697710
+      areyouready_5: -283167629406811839
+      areyouready_6: 171426215798174819
+      areyouready_7: -7394561772296097264
+      areyouready_8: 8104734893833210532
+      areyouready_9: -5113953422522958680
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

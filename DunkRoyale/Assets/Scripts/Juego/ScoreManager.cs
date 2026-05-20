@@ -11,19 +11,27 @@ public class ScoreManager : MonoBehaviour
     [Header("UI")]
     public Text lakersScoreText;
     public Text npcScoreText;
-    [Header("Créditos por resultado")]
-    public int creditsOnWin  = 50;
-    public int creditsOnLoss = 10;
+
     private int lakersScore = 0;
     private int npcScore = 0;
-    private bool matchSaved  = false;
+    private bool matchSaved = false;
 
     [Header("Final Game Panel UI")]
-    public Text finalScore1Text;  
-    public Text finalScore2Text;  
+    public Text finalScore1Text;
+    public Text finalScore2Text;
 
     public int GetLakersScore() => lakersScore;
     public int GetNpcScore() => npcScore;
+
+    public int CalculateCredits()
+    {
+        if (lakersScore >= 6)
+            return 30;
+        else if (lakersScore >= 3)
+            return 15;
+        else
+            return 5;
+    }
 
     void Awake()
     {
@@ -43,6 +51,7 @@ public class ScoreManager : MonoBehaviour
             lakersScoreText.text = lakersScore.ToString();
         }
     }
+
     public void OnGameEnd()
     {
         if (matchSaved) return;
@@ -61,11 +70,10 @@ public class ScoreManager : MonoBehaviour
 
     IEnumerator SaveMatch()
     {
-        bool won          = lakersScore > npcScore;
-        int  credits      = won ? creditsOnWin : creditsOnLoss;
-        int  opposingTeam = PlayerPrefs.GetInt("OpposingTeamId", 0); // 0 = sin partido activo
+        bool won = lakersScore > npcScore;
+        int credits = CalculateCredits();
+        int opposingTeam = PlayerPrefs.GetInt("OpposingTeamId", 0);
 
-        // Construir JSON manualmente (Unity no tiene JsonUtility para serializar anónimos)
         var sb = new StringBuilder("{");
         sb.Append($"\"player_id\":\"{SupabaseConfig.Instance.UserId}\",");
         sb.Append($"\"player_score\":{lakersScore},");
@@ -76,7 +84,7 @@ public class ScoreManager : MonoBehaviour
             sb.Append($",\"opposing_team_id\":{opposingTeam}");
         sb.Append("}");
 
-        var url  = SupabaseConfig.Instance.SupabaseUrl + "/rest/v1/minigame_match";
+        var url = SupabaseConfig.Instance.SupabaseUrl + "/rest/v1/minigame_match";
         var body = Encoding.UTF8.GetBytes(sb.ToString());
 
         using var request = new UnityWebRequest(url, "POST");

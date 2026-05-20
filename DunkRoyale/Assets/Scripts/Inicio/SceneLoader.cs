@@ -12,13 +12,13 @@ public class SceneLoader : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene("Inicio"); 
+        Debug.Log("[SceneLoader] ReturnToMainMenu called");
+        SceneManager.LoadScene("Inicio");
     }
 
     public void PlayAgain()
     {
-        // Reutiliza el OpposingTeamId que ya está guardado
-        // Si era Play Match tenía un teamId > 0, si era Practice tenía 0
+        Debug.Log("[SceneLoader] PlayAgain called");
         SceneManager.LoadScene("Game");
     }
 }
