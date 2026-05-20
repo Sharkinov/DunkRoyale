@@ -7,18 +7,29 @@ public class SceneLoader : MonoBehaviour
     {
         PlayerPrefs.SetInt("OpposingTeamId", 0);
         PlayerPrefs.Save();
-        SceneManager.LoadScene("Game");
+        PlayGameMusicAndLoad();
     }
 
     public void ReturnToMainMenu()
     {
-        Debug.Log("[SceneLoader] ReturnToMainMenu called");
-        SceneManager.LoadScene("Inicio");
+        if (SFXManager.Instance != null)
+            SFXManager.Instance.PlayMainMenuMusic();
+
+        SceneManager.LoadScene("Inicio"); 
     }
 
     public void PlayAgain()
     {
-        Debug.Log("[SceneLoader] PlayAgain called");
+        // Reutiliza el OpposingTeamId que ya está guardado
+        // Si era Play Match tenía un teamId > 0, si era Practice tenía 0
+        PlayGameMusicAndLoad();
+    }
+
+    private void PlayGameMusicAndLoad()
+    {
+        if (SFXManager.Instance != null)
+            SFXManager.Instance.PlayGameMusic();
+
         SceneManager.LoadScene("Game");
     }
 }
