@@ -1,9 +1,7 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameButton;
@@ -13,6 +11,8 @@ public class MainMenuManager : MonoBehaviour
     //Si no encuentra juego desactiva el boton y solamente deja el practice game
     void Start()
     {
+        if (SFXManager.Instance != null)
+            SFXManager.Instance.PlayMainMenuMusic();
         if (gameButton != null)
         {
             gameButton.SetActive(false);
@@ -48,6 +48,9 @@ public class MainMenuManager : MonoBehaviour
     //Agregar más lógica para identificar si viene del match o del practice!
     public void PasarAJuego()
     {
+        if (SFXManager.Instance != null)
+            SFXManager.Instance.PlayGameMusic();
+
         SceneManager.LoadScene("Game");
     }
 }
