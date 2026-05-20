@@ -20,47 +20,60 @@ public class CountdownManager : MonoBehaviour
         StartCoroutine(RunCountdown());
     }
 
-    IEnumerator RunCountdown()
+   IEnumerator RunCountdown()
     {
         countdownPanel.SetActive(true);
 
-        yield return null; // esperar un frame
+        yield return null;
+
+        Vector3 scaleUno = uno.transform.localScale;
+        Vector3 scaleDos = dos.transform.localScale;
+        Vector3 scaleTres = tres.transform.localScale;
+        Vector3 scaleReady = areyouready.transform.localScale;
 
         uno.SetActive(false);
         dos.SetActive(false);
         tres.SetActive(false);
         areyouready.SetActive(false);
 
+        // Audio 3,2,1
+        if (SFXManager.Instance != null)
+            SFXManager.Instance.PlayOnetwo();
+
         panelBackground.color = amarillo;
-        yield return StartCoroutine(AnimateIn(uno));
-        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(AnimateIn(uno, scaleUno));
+        yield return new WaitForSeconds(0.3f);
         uno.SetActive(false);
 
         panelBackground.color = morado;
-        yield return StartCoroutine(AnimateIn(dos));
+        yield return StartCoroutine(AnimateIn(dos, scaleDos));
         yield return new WaitForSeconds(0.3f);
         dos.SetActive(false);
 
         panelBackground.color = amarillo;
-        yield return StartCoroutine(AnimateIn(tres));
+        yield return StartCoroutine(AnimateIn(tres, scaleTres));
         yield return new WaitForSeconds(0.3f);
         tres.SetActive(false);
 
+        // Audio are you ready
+        if (SFXManager.Instance != null)
+            SFXManager.Instance.PlayReadyForThis();
+
         panelBackground.color = morado;
-        yield return StartCoroutine(AnimateIn(areyouready));
+        yield return StartCoroutine(AnimateIn(areyouready, scaleReady));
         yield return new WaitForSeconds(1.5f);
 
         countdownPanel.SetActive(false);
         gameTimer.StartGame();
     }
-
-    IEnumerator AnimateIn(GameObject obj)
+    IEnumerator AnimateIn(GameObject obj, Vector3 targetScale)
     {
         obj.SetActive(true);
+        obj.transform.localScale = Vector3.zero;
+        yield return null; // esperar un frame en zero
+
         float duration = 0.5f;
         float elapsed = 0f;
-        Vector3 targetScale = obj.transform.localScale;
-        obj.transform.localScale = Vector3.zero;
 
         while (elapsed < duration)
         {

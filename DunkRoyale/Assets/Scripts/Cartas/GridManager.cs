@@ -80,7 +80,10 @@ public class GridManager : MonoBehaviour
         string spriteName = card.sprite?.name.Replace(" ", "");
         Debug.Log($"Looking for prefab: '{spriteName}'");
         GameObject prefabToSpawn = GetPrefabForCharacter(spriteName);
-
+        // Sonido deploy
+        if (SFXManager.Instance != null)
+            SFXManager.Instance.PlayPonerMonoEnCancha();
+            
         GameObject player = Instantiate(prefabToSpawn, worldPosition, Quaternion.identity);
         var combat = player.GetComponent<PlayerCombat>();
         if (combat != null)

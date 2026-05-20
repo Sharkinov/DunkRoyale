@@ -58,6 +58,9 @@ public class GameTimer : MonoBehaviour
     {
         gameEnded = true;
 
+        if (SFXManager.Instance != null)
+        SFXManager.Instance.PlayMarcadorFinal();
+
         if (npcSpawner != null)
             npcSpawner.enabled = false;
 

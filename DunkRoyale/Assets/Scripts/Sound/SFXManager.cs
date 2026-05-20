@@ -73,6 +73,36 @@ public class SFXManager : MonoBehaviour
         audioSource.Play();
     }
 
+    public void PlayOnetwo()
+    {
+        PlaySFX(onetwo);
+    }
+
+    public void PlayReadyForThis()
+    {
+        PlaySFX(readyforthis, 3f);
+    }
+
+    public void PlaySelectTarjeta()
+    {
+        PlaySFX(selectTarjeta, 7f);
+    }
+
+    public void PlayPonerMonoEnCancha()
+    {
+        PlaySFX(ponermonoencancha, 5f);
+    }
+
+    public void PlayMarcadorFinal()
+    {
+        PlaySFX(marcadorFinal, 2f);
+    }
+
+    public void PlayGolpe()
+    {
+        PlaySFX(Golpe);
+    }
+
     public void StopMusic()
     {
         audioSource.Stop();
