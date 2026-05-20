@@ -24,6 +24,7 @@ public class BasketTrigger : MonoBehaviour
 
         if (scoredByNPC || scoredByPlayer)
         {
+            SFXManager.Instance.PlayCanasta();
             ScoreManager.Instance.AddScore(isNPCCharacter);
             combat.BenchPlayer();
         }
