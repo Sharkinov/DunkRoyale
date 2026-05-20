@@ -97,6 +97,9 @@ public class CardManager : MonoBehaviour
 
         selectedCardIndex = slotIndex;
         GridManager.Instance.ShowZones();
+
+        if (SFXManager.Instance != null)
+        SFXManager.Instance.PlaySelectTarjeta();
     }
 
     public bool ConsumeSelectedCard()

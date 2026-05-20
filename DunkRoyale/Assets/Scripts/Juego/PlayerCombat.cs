@@ -317,6 +317,9 @@ IEnumerator JoinConfrontation(PlayerCombat opponent)
 
 IEnumerator FlashRed()
 {
+    if (SFXManager.Instance != null)
+    SFXManager.Instance.PlayGolpe();
+    
     // Solo flashear el sprite del personaje y la camisa, NO las barras
     var allRenderers = GetComponentsInChildren<SpriteRenderer>();
     var gameRenderers = System.Array.FindAll(allRenderers, sr => 
