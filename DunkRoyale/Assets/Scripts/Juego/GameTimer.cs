@@ -61,6 +61,10 @@ public class GameTimer : MonoBehaviour
         if (SFXManager.Instance != null)
         SFXManager.Instance.PlayMarcadorFinal();
 
+        var audioSettings = FindObjectOfType<AudioSettingsManager>();
+        if (audioSettings != null)
+            audioSettings.ClosePanel();
+
         if (npcSpawner != null)
             npcSpawner.enabled = false;
 
