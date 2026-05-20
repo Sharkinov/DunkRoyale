@@ -18,14 +18,22 @@ public class ElixirBar : MonoBehaviour
     }
 
     // Update is called once per frame
+    private bool recharging = true;
+
     void Update()
     {
+        if (!recharging) return;
         if(currentElixir < maxElixir)
         {
             currentElixir += recargaAmount * Time.deltaTime;
             currentElixir = Mathf.Clamp(currentElixir, 0f, maxElixir);
             UpdateBar();
         }
+    }
+
+    public void StopRecharge()
+    {
+        recharging = false;
     }
     void UpdateBar()
     {
