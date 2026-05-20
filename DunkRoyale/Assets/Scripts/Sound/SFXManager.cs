@@ -16,6 +16,8 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AudioClip marcadorFinal;
     private AudioSource audioSource;
 
+    private float sfxVolume = 1f;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -45,11 +47,20 @@ public class SFXManager : MonoBehaviour
         PlayMusic(gameSound);
     }
 
+    public void SetMusicVolume(float value)
+    {
+        audioSource.volume = value;
+    }
+
+    public void SetSFXVolume(float value)
+    {
+        sfxVolume = value;
+    }
+
     public void PlaySFX(AudioClip clip)
     {
         if (clip == null || audioSource == null) return;
-
-        audioSource.PlayOneShot(clip);
+        audioSource.PlayOneShot(clip, sfxVolume);
     }
 
     public void PlaySFX(AudioClip clip, float volumeScale)
