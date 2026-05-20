@@ -19,6 +19,9 @@ public class GameTimer : MonoBehaviour
 
     private float timeRemaining;
     private bool gameEnded = false;
+     private bool gameStarted = false;
+
+    public Text creditsEarnedText;
 
     void Start()
     {
@@ -28,8 +31,14 @@ public class GameTimer : MonoBehaviour
         if (loserPanel != null)     loserPanel.SetActive(false);
     }
 
+    public void StartGame() // ← CountdownManager llama esto
+    {
+        gameStarted = true;
+    }
+
     void Update()
     {
+        if (!gameStarted) return;
         if (gameEnded) return;
 
         timeRemaining -= Time.deltaTime;
@@ -49,31 +58,34 @@ public class GameTimer : MonoBehaviour
     {
         gameEnded = true;
 
-        // Parar spawner
         if (npcSpawner != null)
             npcSpawner.enabled = false;
 
-        // Destruir todos los personajes en cancha
-        var allObjects = FindObjectsOfType<PlayerCombat>();
-        foreach (var obj in allObjects)
-            Destroy(obj.gameObject);
+        var elixirBar = FindObjectOfType<ElixirBar>();
+        if (elixirBar != null)
+            elixirBar.StopRecharge();
 
         // Guardar partida
         ScoreManager.Instance.OnGameEnd();
 
-        // Mostrar panel final
+        // Mostrar panel primero
         StartCoroutine(ShowEndPanel());
     }
 
     IEnumerator ShowEndPanel()
     {
-        yield return new WaitForSeconds(0.5f);
-
         if (finalGamePanel != null)
             finalGamePanel.SetActive(true);
 
         int lakersScore = ScoreManager.Instance.GetLakersScore();
         int npcScore = ScoreManager.Instance.GetNpcScore();
+
+        // Mostrar créditos ganados
+        if (creditsEarnedText != null)
+        {
+            int credits = ScoreManager.Instance.CalculateCredits();
+            creditsEarnedText.text = $"+{credits}";
+        }
 
         if (lakersScore == npcScore)
         {
@@ -87,5 +99,10 @@ public class GameTimer : MonoBehaviour
         {
             if (loserPanel != null) loserPanel.SetActive(true);
         }
+
+        yield return new WaitForSeconds(0.3f);
+        var allObjects = FindObjectsOfType<PlayerCombat>();
+        foreach (var obj in allObjects)
+            Destroy(obj.gameObject);
     }
 }
