@@ -23,23 +23,35 @@ public class AudioSettingsManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log($"[AudioSettings] Init — musicMuted={musicMuted}");
-        // Cargar valores guardados
-        float savedMusic = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
-        float savedSFX = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
+        // 1. Load saved values
+        musicMuted = PlayerPrefs.GetInt("MusicMuted", 0) == 1;
+        sfxMuted   = PlayerPrefs.GetInt("SFXMuted",   0) == 1;
 
-        musicSlider.value = savedMusic;
-        sfxSlider.value = savedSFX;
+        float savedMusic = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        float savedSFX   = PlayerPrefs.GetFloat("SFXVolume",   0.5f);
 
         lastMusicVolume = savedMusic;
-        lastSFXVolume = savedSFX;
+        lastSFXVolume   = savedSFX;
 
-        ApplyMusicVolume(savedMusic);
-        ApplySFXVolume(savedSFX);
+        // 2. Add listeners BEFORE setting slider values
+        musicSlider.onValueChanged.AddListener(OnMusicSliderChanged);
+        sfxSlider.onValueChanged.AddListener(OnSFXSliderChanged);
+
+        // 3. Set sliders — muted = 0, unmuted = saved value
+        musicSlider.onValueChanged.RemoveListener(OnMusicSliderChanged);
+        sfxSlider.onValueChanged.RemoveListener(OnSFXSliderChanged);
+
+        musicSlider.value = musicMuted ? 0f : savedMusic;
+        sfxSlider.value   = sfxMuted   ? 0f : savedSFX;
 
         musicSlider.onValueChanged.AddListener(OnMusicSliderChanged);
         sfxSlider.onValueChanged.AddListener(OnSFXSliderChanged);
 
+        // 4. Apply to SFXManager
+        ApplyMusicVolume(musicMuted ? 0f : savedMusic);
+        ApplySFXVolume(sfxMuted     ? 0f : savedSFX);
+
+        // 5. Update UI
         UpdateMuteIcons();
 
         if (audioSettingsPanel != null)
@@ -84,7 +96,9 @@ public class AudioSettingsManager : MonoBehaviour
     public void ToggleMuteMusic()
 {
     musicMuted = !musicMuted;
-    musicSlider.onValueChanged.RemoveListener(OnMusicSliderChanged); // 👈 remove first
+    PlayerPrefs.SetInt("MusicMuted", musicMuted ? 1 : 0); 
+
+    musicSlider.onValueChanged.RemoveListener(OnMusicSliderChanged); 
 
     if (musicMuted)
     {
@@ -98,14 +112,15 @@ public class AudioSettingsManager : MonoBehaviour
         ApplyMusicVolume(lastMusicVolume);
     }
 
-    musicSlider.onValueChanged.AddListener(OnMusicSliderChanged); // 👈 re-add after
+    musicSlider.onValueChanged.AddListener(OnMusicSliderChanged); 
     UpdateMuteIcons();
 }
 
 public void ToggleMuteSFX()
 {
     sfxMuted = !sfxMuted;
-    sfxSlider.onValueChanged.RemoveListener(OnSFXSliderChanged); // 👈 remove first
+    PlayerPrefs.SetInt("SFXMuted", sfxMuted ? 1 : 0);
+    sfxSlider.onValueChanged.RemoveListener(OnSFXSliderChanged); 
 
     if (sfxMuted)
     {
@@ -119,7 +134,7 @@ public void ToggleMuteSFX()
         ApplySFXVolume(lastSFXVolume);
     }
 
-    sfxSlider.onValueChanged.AddListener(OnSFXSliderChanged); // 👈 re-add after
+    sfxSlider.onValueChanged.AddListener(OnSFXSliderChanged); 
     UpdateMuteIcons();
 }
 

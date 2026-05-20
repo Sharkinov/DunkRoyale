@@ -3,6 +3,7 @@ using UnityEngine;
 public class SFXManager : MonoBehaviour
 {
     public static SFXManager Instance { get; private set; }
+
     [SerializeField] private AudioClip mainSound;
     [SerializeField] private AudioClip gameSound;
     [SerializeField] private AudioClip clickButton;
@@ -14,8 +15,9 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AudioClip ponermonoencancha;
     [SerializeField] private AudioClip selectTarjeta;
     [SerializeField] private AudioClip marcadorFinal;
-    private AudioSource audioSource;
 
+    private AudioSource musicSource;
+    private AudioSource sfxSource;
     private float sfxVolume = 1f;
 
     void Awake()
@@ -31,10 +33,17 @@ public class SFXManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.loop = true;
-        audioSource.playOnAwake = false;
-        audioSource.volume = 0.5f;
+        musicSource = gameObject.AddComponent<AudioSource>();
+        musicSource.loop = true;
+        musicSource.playOnAwake = false;
+        musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+
+        sfxSource = gameObject.AddComponent<AudioSource>();
+        sfxSource.loop = false;
+        sfxSource.playOnAwake = false;
+        sfxSource.volume = 1f;
+
+        sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
     }
 
     public void PlayMainMenuMusic()
@@ -47,9 +56,22 @@ public class SFXManager : MonoBehaviour
         PlayMusic(gameSound);
     }
 
+    private void PlayMusic(AudioClip clip)
+    {
+        if (clip == null) return;
+        if (musicSource.clip == clip && musicSource.isPlaying) return;
+        musicSource.clip = clip;
+        musicSource.Play();
+    }
+
+    public void StopMusic()
+    {
+        musicSource.Stop();
+    }
+
     public void SetMusicVolume(float value)
     {
-        audioSource.volume = value;
+        musicSource.volume = value;
     }
 
     public void SetSFXVolume(float value)
@@ -59,29 +81,19 @@ public class SFXManager : MonoBehaviour
 
     public void PlaySFX(AudioClip clip)
     {
-        if (clip == null || audioSource == null) return;
-        audioSource.PlayOneShot(clip, sfxVolume);
+        if (clip == null || sfxSource == null) return;
+        sfxSource.PlayOneShot(clip, sfxVolume);
     }
 
     public void PlaySFX(AudioClip clip, float volumeScale)
     {
-        if (clip == null || audioSource == null) return;
-
-        audioSource.PlayOneShot(clip, volumeScale);
+        if (clip == null || sfxSource == null) return;
+        sfxSource.PlayOneShot(clip, volumeScale * sfxVolume);
     }
 
     public void PlayClickButton()
     {
         PlaySFX(clickButton, clickButtonVolume);
-    }
-
-    private void PlayMusic(AudioClip clip)
-    {
-        if (clip == null) return;
-        if (audioSource.clip == clip && audioSource.isPlaying) return;
-
-        audioSource.clip = clip;
-        audioSource.Play();
     }
 
     public void PlayOnetwo()
@@ -104,6 +116,11 @@ public class SFXManager : MonoBehaviour
         PlaySFX(ponermonoencancha, 5f);
     }
 
+    public void PlayCanasta()
+    {
+        PlaySFX(canasta, 2f);
+    }
+
     public void PlayMarcadorFinal()
     {
         PlaySFX(marcadorFinal, 2f);
@@ -112,10 +129,5 @@ public class SFXManager : MonoBehaviour
     public void PlayGolpe()
     {
         PlaySFX(Golpe);
-    }
-
-    public void StopMusic()
-    {
-        audioSource.Stop();
     }
 }
