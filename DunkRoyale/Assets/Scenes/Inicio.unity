@@ -214,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2070087159}
+        m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+        m_MethodName: PlayClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &39502372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +567,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2065935532}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
         m_MethodName: PasarAJuego
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2070087159}
+        m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+        m_MethodName: PlayClickButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1048,7 +1072,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1355288605}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2070087159}
+        m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+        m_MethodName: PlayClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1355288605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1512,6 +1548,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SFXManager
   mainSound: {fileID: 8300000, guid: a37964483e1d5ed489fadf1db54c92b3, type: 3}
   gameSound: {fileID: 8300000, guid: 5001a9c4109a6b646bd81f12c5888e44, type: 3}
+  clickButton: {fileID: 8300000, guid: 2220a1a30d220cf4b9caf016a2cb4ffe, type: 3}
+  clickButtonVolume: 1
+  Golpe: {fileID: 8300000, guid: 7c0780ae789df844a83b3d3528649a4b, type: 3}
+  canasta: {fileID: 8300000, guid: e3afb2a538aab4747b0bfacb8e1b78e9, type: 3}
+  readyforthis: {fileID: 8300000, guid: dc28d2ae0e7f7904587b42a0d948e039, type: 3}
+  onetwo: {fileID: 8300000, guid: 160d4cfbd89e3434dbd9910234ca6381, type: 3}
+  ponermonoencancha: {fileID: 8300000, guid: 813ff5397b9ffca42b99e4b611d703fc, type: 3}
+  selectTarjeta: {fileID: 8300000, guid: 75b286ef686a1ef40b199a05bb3b7874, type: 3}
+  marcadorFinal: {fileID: 8300000, guid: e130bc4dc1b2da7458655a8f66e4d775, type: 3}
 --- !u!4 &2070087160
 Transform:
   m_ObjectHideFlags: 0

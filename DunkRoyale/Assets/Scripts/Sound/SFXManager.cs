@@ -6,8 +6,14 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AudioClip mainSound;
     [SerializeField] private AudioClip gameSound;
     [SerializeField] private AudioClip clickButton;
-    [SerializeField] private AudioClip recibirGolpe;
-
+    [SerializeField, Range(0f, 1f)] private float clickButtonVolume = 1f;
+    [SerializeField] private AudioClip Golpe;
+    [SerializeField] private AudioClip canasta;
+    [SerializeField] private AudioClip readyforthis;
+    [SerializeField] private AudioClip onetwo;
+    [SerializeField] private AudioClip ponermonoencancha;
+    [SerializeField] private AudioClip selectTarjeta;
+    [SerializeField] private AudioClip marcadorFinal;
     private AudioSource audioSource;
 
     void Awake()
@@ -37,6 +43,25 @@ public class SFXManager : MonoBehaviour
     public void PlayGameMusic()
     {
         PlayMusic(gameSound);
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        if (clip == null || audioSource == null) return;
+
+        audioSource.PlayOneShot(clip);
+    }
+
+    public void PlaySFX(AudioClip clip, float volumeScale)
+    {
+        if (clip == null || audioSource == null) return;
+
+        audioSource.PlayOneShot(clip, volumeScale);
+    }
+
+    public void PlayClickButton()
+    {
+        PlaySFX(clickButton, clickButtonVolume);
     }
 
     private void PlayMusic(AudioClip clip)
