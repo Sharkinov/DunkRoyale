@@ -11,6 +11,8 @@ public class ElixirBar : MonoBehaviour
     public float recargaAmount = 0.1f;
     private float currentElixir;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Text")]
+    public Text elixirText;
     void Start()
     {
      currentElixir = maxElixir;
@@ -38,6 +40,10 @@ public class ElixirBar : MonoBehaviour
     void UpdateBar()
     {
         elixirImage.fillAmount = currentElixir / maxElixir;
+        if (elixirText != null)
+        {
+            elixirText.text = $"{Mathf.FloorToInt(currentElixir)}/{Mathf.FloorToInt(maxElixir)}";
+        }
     }
     //Esto es para que se gaste jeje
     public bool TrySpend(float cost)
